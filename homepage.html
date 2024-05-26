@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #0073e6;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .filters button {
+            border: none;
+            background-color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filters button.active, .filters button:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .book-item {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .book-item img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .book-item p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+        .book-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+        }
+        .footer img {
+            width: 24px;
+            height: 24px;
+        }
+        .footer a:hover {
+            opacity: 0.8;
+        }
+        @media (max-width: 900px) {
+            .book-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .book-item {
+                width: calc(100% - 20px);
+            }
+            .search-bar input {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hello Rana! Which book do you want to buy?</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for books...">
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="new">New</button>
+            <button class="filter-btn" data-filter="bestseller">BestSeller</button>
+            <button class="filter-btn" data-filter="audiobook">Audiobook</button>
+        </div>
+        <div class="book-list">
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/6t4s6k3/A-million-to-one.jpg" alt="A Million to One">
+                <p>A Million to One<br><small>by Tony Faggioli</small></p>
+            </div>
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/5KCr3w2/The-boy-with.jpg" alt="The Boy with the Tiger's Heart">
+                <p>The Boy with the Tiger's Heart<br><small>by Linda Coggin</small></p>
+            </div>
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/jZLYH5c/1681241540159.jpg" alt="The Imperfections of Memory">
+                <p>The Imperfections of Memory<br><small>by Angelina Alluda</small></p>
+            </div>
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/dPkbJ0F/download.jpg" alt="The Light Beyond the Garden Wall">
+                <p>The Light Beyond the Garden Wall<br><small>by Scott Whitehead</small></p>
+            </div>
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/VtQJzdd/download-1.jpg" alt="Harry Potter">
+                <p>Harry Potter<br><small>by J.K. Rowling</small></p>
+            </div>
+            <div class="book-item" data-category="all">
+                <img src="https://i.ibb.co/qRFhyVq/1652098416-41-MCe-OCPTr-L-SL500.jpg" alt="The Ballad of Black Tom">
+                <p>The Ballad of Black Tom<br><small>by Victor LaValle</small></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <nav class="footer">
+            <a href="Home Page.html" class="nav-item"><img src="https://i.ibb.co/k9Zbwkn/home-2.png" alt="Home"></a>
+            <a href="Favourite Books.html" class="nav-item"><img src="https://i.ibb.co/1rkfjbg/bookmark.png" alt="Favourite"></a>
+            <a href="Settings Page.html" class="nav-item"><img src="https://i.ibb.co/8d4X7Y2/settings.png" alt="Settings"></a>
+        </nav>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                document.querySelectorAll('.book-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

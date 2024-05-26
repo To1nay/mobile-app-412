@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(135deg, #FFC3A0, #FFAFBD, #FFC3A0);
+}
+h1 {
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.illustration {
+  width: 100%;
+  height: auto;
+}
+.illustration {
+  background-image: url('path/to/illustration.png');
+  background-size: cover;
+  /* Adjust dimensions as needed */
+}
+.btn {
+  background-color: #FFAFBD;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  /* Additional styles as needed */
+}

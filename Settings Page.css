@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5E8D6;
+}
+
+.container {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.time {
+    font-size: 1.2em;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.grid-icon, .notification-icon {
+    width: 20px;
+    height: 20px;
+    background-color: black; /* Placeholder */
+    margin-left: 15px;
+}
+
+.add-book {
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #7D5A50;
+}
+
+.account-section, .setting-section {
+    background-color: #D5C4B0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.account-info, .password-security, .setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.setting-option:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: black; /* Placeholder */
+    margin-right: 10px;
+}
+
+.text {
+    flex: 1;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #3E2723;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    color: #795548;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+.footer a {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.footer img {
+    width: 24px;
+    height: 24px;
+}
+.footer a:hover {
+    opacity: 0.8;
+}

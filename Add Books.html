@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="Add Books.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ADD BOOK</h1>
+            <div class="notification-icon">
+                <img src="https://i.ibb.co/MhyzDjw/bell.png" alt="Notification Icon">
+            </div>
+        </div>
+        <form id="add-book-form">
+            <div class="image-upload">
+                <label for="book-cover">
+                    <div class="image-placeholder">+</div>
+                </label>
+                <input type="file" id="book-cover" style="display: none;">
+            </div>
+            <div class="radio-buttons">
+                <label><input type="radio" name="progress-type" value="pages" checked> Pages</label>
+                <label><input type="radio" name="progress-type" value="percentage"> Percentage</label>
+                <label><input type="radio" name="progress-type" value="audiobook"> Audiobook</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="book-title" placeholder="Book Title*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="book-author" placeholder="Book Author*" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="number-of-pages" placeholder="Number of pages*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="collections" placeholder="Collections">
+            </div>
+            <div class="checkboxes">
+                <label><input type="checkbox" id="read-in-the-past"> Book I've read in the past</label>
+                <label><input type="checkbox" id="currently-reading"> Book I'm currently reading</label>
+            </div>
+            <button type="submit" id="add-book-button">Add Book</button>
+        </form>
+        <footer>
+            <nav class="icon-container">
+                <a href="Home Page.html" class="nav-item"><img class="Icons" src="https://i.ibb.co/k9Zbwkn/home-2.png" alt=""></a>
+                <a href="Favourite Books.html" class="nav-item"><img src="https://i.ibb.co/1rkfjbg/bookmark.png" alt=""></a>
+                <a href="Settings Page.html" class="nav-item"><img src="https://i.ibb.co/8d4X7Y2/settings.png" alt=""></a>
+            </nav>
+        </footer>
+    </div>
+    <script src="Add Books.js"></script>
+</body>
+</html>
